@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import mongoengine
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -71,15 +72,24 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Backend.wsgi.application'
 
 
+MONGO_DBNAME = 'skillSpring'
+MONGO_USERNAME = 'jhasatyam0118'
+MONGO_PASSWORD = 'satyam'
+MONGO_CLUSTER_NAME = 'cluster0'
+
+MONGO_URI = f'mongodb+srv://jhasatyam0118:satyam@cluster0.e8kd4yf.mongodb.net/skillSpring?retryWrites=true&w=majority'
+
+mongoengine.connect(host=MONGO_URI, db=MONGO_DBNAME)
+
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = { mongoengine dnspython
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation

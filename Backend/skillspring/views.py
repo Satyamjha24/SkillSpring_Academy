@@ -1,9 +1,13 @@
 from django.shortcuts import render,redirect
-from django.http import JsonResponse
+from django.http import JsonResponse,HttpResponse
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 import json
 from . import models
+
+def home(request):
+    return HttpResponse("<h1>Welcome to Skill Spring Backend</h1>")
+
 
 
 #Department Views

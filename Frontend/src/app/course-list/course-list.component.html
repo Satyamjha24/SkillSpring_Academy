@@ -1,0 +1,39 @@
+<h1 class="mt-8 mb-4 text-center font-bold text-3xl">Available Courses</h1>
+   <div class="mt-4 flex justify-center items-center">
+     <div class="overflow-x-auto w-full p-20">
+       <table class="min-w-full table-fixed border-collapse border border-gray-400">
+         <thead>
+           <tr class="bg-gray-500 text-white">
+            <th class="w-1/12 p-2 border border-gray-400 text-center"> S.No. </th>
+            <th class="w-2/12 p-2 border border-gray-400 text-center"> Course Code </th>
+            <th class="w-2/12 p-2 border border-gray-400 text-center"> Course Name </th>
+            <th class="w-4/12 p-2 border border-gray-400 text-center"> Course Description </th>
+            <th class="w-1/12 p-2 border border-gray-400 text-center"> Course Credits </th>
+            <th class="w-1/12 p-2 border border-gray-400 text-center"> Edit </th>
+            <th class="w-3/12 p-2 border border-gray-400 text-center"> Delete </th>
+             <!-- Add more headers as needed -->
+            </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let course of courses; let i=index" class="{{ i % 2 === 0 ? 'bg-gray-100' : 'bg-white' }}">
+             <td class="p-2 border border-gray-400 text-center">{{ i+1}}.</td>
+             <td class="p-2 border border-gray-400 text-center">{{ course.CourseCode }}</td>
+             <td class="p-2 border border-gray-400 text-center">{{ course.Name }}</td>
+             <td class="p-2 border border-gray-400 text-center">{{ course.Description }}</td>
+             <td class="p-2 border border-gray-400 text-center">{{ course.Credits }}</td>
+             <td class="p-2 border border-gray-400 text-center">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded" (click)="onEditClick(course._id)">
+                <i class="fas fa-edit"></i> Edit
+              </button>
+            </td>
+            <td class="p-2 border border-gray-400 text-center">
+              <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-2 rounded"  (click)="onDeleteClick(course._id)">
+                <i class="fas fa-trash"></i> Delete
+              </button>
+             <!-- Display other properties -->
+           </tr>
+         </tbody>
+       </table>
+     </div>
+   </div>
+   

@@ -1,6 +1,10 @@
 from django.urls import path
 from . import views
 urlpatterns = [
+
+    # Home route
+    path("", views.home, name="home"),
+    
     # Department URLs
     path('departments/', views.get_departments, name='departments-list'),
     path('add_department/', views.add_department, name='add_department'),

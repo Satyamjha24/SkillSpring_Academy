@@ -1,0 +1,144 @@
+<h1 class="mt-8 mb-4 text-center font-bold text-3xl">Students List</h1>
+<div class="mt-4 flex justify-center items-center">
+  <div class="overflow-x-auto w-full p-20">
+    <table
+      class="min-w-full table-fixed border-collapse border border-gray-400"
+    >
+      <thead>
+        <tr class="bg-gray-500 text-white">
+          <th class="w-1/12 p-2 border border-gray-400 text-center">S.No.</th>
+          <th class="w-1/12 p-2 border border-gray-400 text-center">
+            Student ID
+          </th>
+          <th class="w-2/12 p-2 border border-gray-400 text-center">
+            Student Name
+          </th>
+          <th class="w-1/12 p-2 border border-gray-400 text-center">Gender</th>
+          <th class="w-2/12 p-2 border border-gray-400 text-center">D.O.B</th>
+          <th class="w-2/12 p-2 border border-gray-400 text-center">Major</th>
+          <th class="w-1/12 p-2 border border-gray-400 text-center">Email</th>
+          <th class="w-1/12 p-2 border border-gray-400 text-center">
+            Contact Number
+          </th>
+          <th class="w-1/12 p-2 border border-gray-400 text-center">Edit</th>
+          <th class="w-1/12 p-2 border border-gray-400 text-center">Delete</th>
+          <!-- Add more headers as needed -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students; let i = index">
+          <td class="p-2 border border-gray-400 text-center">{{ i + 1 }}.</td>
+          <td class="p-2 border border-gray-400 text-center">
+            <input
+              [(ngModel)]="student.StudentID"
+              *ngIf="editMode && i === editedIndex"
+              class="pl-2 border border-gray-400"
+            />
+            <span class="capitalize" *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+              student.StudentID
+            }}</span>
+          </td>
+          <td class="p-2 border border-gray-400 text-center capitalize">
+            <input
+              [(ngModel)]="student.Name"
+              *ngIf="editMode && i === editedIndex"
+              class="pl-2 border border-gray-400"
+            />
+            <span *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+              student.Name
+            }}</span>
+          </td>
+          <td class="p-2 border border-gray-400 text-center">
+            <select
+              id="Gender"
+              name="Gender"
+              [(ngModel)]="student.Gender"
+              *ngIf="editMode && i === editedIndex"
+              class="form-select border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-500 capitalize"
+            >
+              <option value="" disabled selected>Select a gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+            <span
+              class="capitalize"
+              *ngIf="!editMode || (editMode && i !== editedIndex)"
+              >{{ student.Gender }}</span
+            >
+          </td>
+          <td class="p-2 border border-gray-400 text-center">
+            <input
+              type="date"
+              id="DoB"
+              name="DoB"
+              [(ngModel)]="student.DoB"
+              *ngIf="editMode && i === editedIndex"
+              class="form-input border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-500"
+            />
+            <span
+              class="capitalize"
+              *ngIf="!editMode || (editMode && i !== editedIndex)"
+              >{{ student.DoB }}</span
+            >
+          </td>
+          <td class="p-2 border border-gray-400 text-center">
+            <input
+              [(ngModel)]="student.Major"
+              *ngIf="editMode && i === editedIndex"
+              class="pl-2 border border-gray-400"
+            />
+            <span *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+              student.Major
+            }}</span>
+          </td>
+          <td class="p-2 border border-gray-400 text-center">
+            <input
+              [(ngModel)]="student.Email"
+              *ngIf="editMode && i === editedIndex"
+              class="pl-2 border border-gray-400"
+            />
+            <span *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+              student.Email
+            }}</span>
+          </td>
+          <td class="p-2 border border-gray-400 text-center">
+            <input
+              [(ngModel)]="student.ContactNum"
+              *ngIf="editMode && i === editedIndex"
+              class="pl-2 border border-gray-400"
+            />
+            <span *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+              student.ContactNum
+            }}</span>
+          </td>
+          <td class="p-2 border border-gray-400 text-center">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold p-4 rounded"
+              (click)="onEditClick(i, student)"
+              *ngIf="!editMode || (editMode && i !== editedIndex)"
+            >
+              <i class="fas fa-edit"></i>
+            </button>
+            <button
+              class="bg-green-500 hover:bg-green-700 text-white font-bold p-4 rounded"
+              (click)="onSaveClick(i)"
+              *ngIf="editMode && i === editedIndex"
+            >
+              <i class="fas fa-save"></i>
+            </button>
+          </td>
+          <td class="p-2 border border-gray-400 text-center">
+            <button
+              class="bg-red-500 hover:bg-red-700 text-white font-bold p-4 rounded"
+              (click)="onDeleteClick(student._id)"
+            >
+              <i class="fas fa-trash"></i>
+            </button>
+          </td>
+          <!-- Display other properties -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

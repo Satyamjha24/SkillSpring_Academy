@@ -11,6 +11,8 @@ import { CourseListComponent } from './course-list/course-list.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { StudentFormComponent } from './student-form/student-form.component';
+import { StudentListComponent } from './student-list/student-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HomeComponent,
     CourseFormComponent,
-    CourseListComponent
+    CourseListComponent,
+    StudentFormComponent,
+    StudentListComponent
   ],
   imports: [
     BrowserModule,

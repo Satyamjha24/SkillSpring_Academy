@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { StudentListComponent } from './student-list/student-list.component';
+import { NgToastModule } from 'ng-angular-popup';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { StudentListComponent } from './student-list/student-list.component';
     FormsModule,
     RouterModule,
     HttpClientModule,
+    NgToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

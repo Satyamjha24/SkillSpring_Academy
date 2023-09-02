@@ -22,6 +22,7 @@ export class StudentFormComponent {
   onSubmit(): void {
     this.studentService.postStudent(this.student).subscribe(response => {
       console.log('Student added:', response);
+      alert('New Student Added Successfuly')
       this.student = {};
     });
   }

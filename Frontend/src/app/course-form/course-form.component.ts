@@ -22,6 +22,7 @@ export class CourseFormComponent {
   onSubmit(): void {
     this.courseService.postCourse(this.course).subscribe(response => {
       console.log('Course added:', response);
+      alert('New Course Added Successfuly')
       this.course = {};
     });
   }

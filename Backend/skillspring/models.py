@@ -1,5 +1,5 @@
 from django.db import models
-from mongoengine import Document, StringField, FloatField, BooleanField, ListField
+from mongoengine import Document, StringField
 
 
 class Department(Document):
@@ -19,13 +19,13 @@ class Instructor(Document):
     DoB = StringField(max_length=50)
     DepartmentID = StringField(max_length=50)
     Email = StringField(max_length=50)
-    ContactNum = FloatField(max_length=50)
+    ContactNum = StringField(max_length=50)
 
 class Course(Document):
     CourseCode = StringField(max_length=50)
     Name = StringField(max_length=50)
     DepartmentID = StringField(max_length=50)
-    Credits = FloatField(max_length=50)
+    Credits = StringField(max_length=50)
     Description = StringField(max_length=50)
     InstructorID = StringField(max_length=50)
 
@@ -36,7 +36,7 @@ class Student(Document):
     DoB = StringField(max_length=50)
     Major = StringField(max_length=50)
     Email = StringField(max_length=50)
-    ContactNum = FloatField(max_length=50)
+    ContactNum = StringField(max_length=50)
 
 class Enrollment(Document):
     EnrollmentID = StringField(max_length=50)

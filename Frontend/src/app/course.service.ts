@@ -18,8 +18,11 @@ export class CourseService {
     return this.http.post(`${this.apiUrl}add_course/`, courseData);
   }
 
-  deleteCourse(CourseCode: string): Observable<any> {
-    return this.http.delete(`${this.apiUrl}courses/${CourseCode}/`);
+  deleteCourse(courseID: string): Observable<any> {
+    return this.http.delete(`${this.apiUrl}courses/${courseID}/`);
+  }
+
+  editCourse(courseID: string, updatedData:any): Observable<any> {
+    return this.http.patch(`${this.apiUrl}courses/update/${courseID}/`,updatedData);
   }
 }
-

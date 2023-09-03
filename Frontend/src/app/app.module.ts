@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { NgToastModule } from 'ng-angular-popup';
+import { InstructorFormComponent } from './instructor-form/instructor-form.component';
+import { InstructorListComponent } from './instructor-list/instructor-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NgToastModule } from 'ng-angular-popup';
     CourseFormComponent,
     CourseListComponent,
     StudentFormComponent,
-    StudentListComponent
+    StudentListComponent,
+    InstructorFormComponent,
+    InstructorListComponent
   ],
   imports: [
     BrowserModule,

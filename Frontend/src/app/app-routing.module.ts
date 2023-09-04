@@ -7,9 +7,11 @@ import { StudentFormComponent } from './student-form/student-form.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { InstructorListComponent } from './instructor-list/instructor-list.component';
 import { InstructorFormComponent } from './instructor-form/instructor-form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'course', component: CourseListComponent },
   { path: 'add_course', component: CourseFormComponent },
   { path: 'student', component: StudentListComponent },

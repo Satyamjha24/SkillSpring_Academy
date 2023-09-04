@@ -1,5 +1,6 @@
-<h1 class="mt-8 mb-4 text-center font-bold text-3xl">Students List</h1>
-<div class="mt-4 flex justify-center items-center">
+<app-dashboard/>
+<h1 class="mt-24 ml-64 text-center font-bold text-3xl">Students List</h1>
+<div class="ml-64 flex justify-center items-center">
   <div class="overflow-x-auto w-full p-20">
     <table
       class="min-w-full table-fixed border-collapse border border-gray-400"
@@ -26,7 +27,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let student of students; let i = index">
+        <tr *ngFor="let student of students; let i = index" class="{{ i % 2 === 0 ? 'bg-blue-100' : 'bg-gray-300' }}">
           <td class="p-2 border border-gray-400 text-center">{{ i + 1 }}.</td>
           <td class="p-2 border border-gray-400 text-center">
             <input

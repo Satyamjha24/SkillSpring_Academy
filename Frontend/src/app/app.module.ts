@@ -16,6 +16,11 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { InstructorFormComponent } from './instructor-form/instructor-form.component';
 import { InstructorListComponent } from './instructor-list/instructor-list.component';
+import { AuthModule } from '@auth0/auth0-angular';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { ProfileComponent } from './profile/profile.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,11 @@ import { InstructorListComponent } from './instructor-list/instructor-list.compo
     StudentFormComponent,
     StudentListComponent,
     InstructorFormComponent,
-    InstructorListComponent
+    InstructorListComponent,
+    LoginComponent,
+    LogoutComponent,
+    ProfileComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +45,14 @@ import { InstructorListComponent } from './instructor-list/instructor-list.compo
     FormsModule,
     RouterModule,
     HttpClientModule,
-    NgToastModule
+    NgToastModule,
+    AuthModule.forRoot({
+      domain: 'dev-jwvwtwvlur4qpvte.us.auth0.com',
+      clientId: '1FfBKJzZOVvh6WhXgSif5GywrSRcpwou',
+      authorizationParams: {
+        redirect_uri: window.location.origin
+      }
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

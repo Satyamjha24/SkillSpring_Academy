@@ -40,6 +40,7 @@ export class CourseListComponent implements OnInit{
           // Handle the successful response here, e.g., update the local data
           // Example: this.students[index] = response;
           console.log('Data updated successfully:', response);
+          this.toast.info({detail:"Update",summary:'Course data updated Successfully',duration:2000, position: 'botomCenter'});
         },
         (error) => {
           // Handle any errors that occur during the PATCH request
@@ -67,6 +68,7 @@ export class CourseListComponent implements OnInit{
         (response) => {
           console.log(`Course with ID ${courseID} deleted.`);
           // Refresh the student list or update as needed
+          this.toast.warning({detail:"Delete",summary:'Course deleted Successfully',duration:2000, position: 'botomCenter'});
           this.courseService.getCourses().subscribe((data) => {
             this.courses = data;
           });

@@ -55,8 +55,9 @@ class Submission(Document):
     SubmissionID = StringField(max_length=50)
     AssignmentID = StringField(max_length=50)
     StudentID = StringField(max_length=50)
-    SubmissionDate = StringField(max_length=50)
     Status = StringField(max_length=50)
+    SubmissionDate = StringField(max_length=50)
+    SubmissionLink = StringField(max_length=50)
     Remarks = StringField(max_length=50)
 
 

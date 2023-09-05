@@ -565,6 +565,7 @@ def get_submissions(request):
             'AssignmentID': submission.AssignmentID,
             'StudentID': submission.StudentID,
             'SubmissionDate': submission.SubmissionDate,
+            'SubmissionLink': submission.SubmissionLink,
             'Status': submission.Status,
             'Remarks': submission.Remarks,
         }
@@ -584,6 +585,7 @@ def add_submission(request):
                 AssignmentID=data['AssignmentID'],
                 StudentID=data['StudentID'],
                 SubmissionDate=data['SubmissionDate'],
+                SubmissionLink=data['SubmissionLink'],
                 Status=data['Status'],
                 Remarks=data['Remarks']
             )
@@ -608,6 +610,8 @@ def update_submission(request, submission_id):
             submission.StudentID = data['StudentID']
         if 'SubmissionDate' in data:
             submission.SubmissionDate = data['SubmissionDate']
+        if 'SubmissionLink' in data:
+            submission.SubmissionLink = data['SubmissionLink']    
         if 'Status' in data:
             submission.Status = data['Status']
         if 'Remarks' in data:

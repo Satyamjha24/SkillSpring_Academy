@@ -1,1 +1,89 @@
-<p>enrollment-list works!</p>
+<app-dashboard/>
+   <h1 class="mt-24 ml-64 text-center font-bold text-3xl">Enrollment List</h1>
+   <div class="ml-64 flex justify-center items-center">
+     <div class="overflow-x-auto w-full p-20">
+       <table class="min-w-full table-fixed border-collapse border border-gray-400">
+         <thead>
+           <tr class="bg-gray-500 text-white">
+            <th class="w-1/12 p-2 border border-gray-400 text-center"> S.No. </th>
+            <th class="w-2/12 p-2 border border-gray-400 text-center"> Enrollment ID </th>
+            <th class="w-2/12 p-2 border border-gray-400 text-center"> Student ID </th>
+            <th class="w-2/12 p-2 border border-gray-400 text-center"> Course Code </th>
+            <th class="w-4/12 p-2 border border-gray-400 text-center"> Enrollment Date </th>
+            <th class="w-1/12 p-2 border border-gray-400 text-center"> Edit </th>
+            <th class="w-3/12 p-2 border border-gray-400 text-center"> Delete </th>
+             <!-- Add more headers as needed -->
+            </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let enrollment of enrollments; let i=index" class="{{ i % 2 === 0 ? 'bg-gray-100' : 'bg-white' }}">
+             <td class="p-2 border border-gray-400 text-center">{{ i+1}}.</td>
+             <td class="p-2 border border-gray-400 text-center">
+              <input
+                [(ngModel)]="enrollment.EnrollmentID"
+                *ngIf="editMode && i === editedIndex"
+                class="pl-2 border border-gray-400"
+              />
+              <span class="capitalize" *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                enrollment.EnrollmentID
+              }}</span>
+            </td>
+             <td class="p-2 border border-gray-400 text-center">
+              <input
+                [(ngModel)]="enrollment.StudentID"
+                *ngIf="editMode && i === editedIndex"
+                class="pl-2 border border-gray-400"
+              />
+              <span class="capitalize" *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                enrollment.StudentID
+              }}</span>
+            </td>
+             <td class="p-2 border border-gray-400 text-center">
+              <input
+                [(ngModel)]="enrollment.CourseCode"
+                *ngIf="editMode && i === editedIndex"
+                class="pl-2 border border-gray-400"
+              />
+              <span class="capitalize" *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                enrollment.CourseCode
+              }}</span>
+            </td>
+             <td class="p-2 border border-gray-400 text-center">
+              <input
+                [(ngModel)]="enrollment.EnrollmentDate"
+                type="date"
+                *ngIf="editMode && i === editedIndex"
+                class="pl-2 border border-gray-400"
+              />
+              <span class="capitalize" *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                enrollment.EnrollmentDate
+              }}</span>
+            </td>
+             <td class="p-2 border border-gray-400 text-center">
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold p-4 rounded"
+                (click)="onEditClick(i, enrollment)"
+                *ngIf="!editMode || (editMode && i !== editedIndex)"
+              >
+                <i class="fas fa-edit"></i>
+              </button>
+              <button
+                class="bg-green-500 hover:bg-green-700 text-white font-bold p-4 rounded"
+                (click)="onSaveClick(i)"
+                *ngIf="editMode && i === editedIndex"
+              >
+                <i class="fas fa-save"></i>
+              </button>
+            </td>
+            <td class="p-2 border border-gray-400 text-center">
+              <button class="bg-red-500 hover:bg-red-700 text-white font-bold p-4 rounded"  (click)="onDeleteClick(enrollment._id)">
+                <i class="fas fa-trash"></i>
+              </button>
+             <!-- Display other properties -->
+           </tr>
+         </tbody>
+       </table>
+     </div>
+   </div>
+   
+

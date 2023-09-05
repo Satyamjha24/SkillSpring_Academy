@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class InstructorService {
 
-  private apiUrl = 'http://127.0.0.1:8000/';
+  private apiUrl = 'https://skill-spring-backend.vercel.app/';
+
 
   constructor(private http: HttpClient) { }
 

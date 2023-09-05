@@ -1,1 +1,122 @@
-<p>submission-list works!</p>
+<app-dashboard/>
+   <h1 class="mt-24 ml-64 text-center font-bold text-3xl">Submission List</h1>
+   <div class="ml-64 flex justify-center items-center">
+     <div class="overflow-x-auto w-full p-20">
+       <table class="min-w-full table-fixed border-collapse border border-gray-400">
+         <thead>
+           <tr class="bg-gray-500 text-white">
+            <th class="w-1/12 p-2 border border-gray-400 text-center"> S.No. </th>
+            <th class="w-2/12 p-2 border border-gray-400 text-center"> Submission ID </th>
+            <th class="w-2/12 p-2 border border-gray-400 text-center"> Assignment ID </th>
+            <th class="w-2/12 p-2 border border-gray-400 text-center"> Student ID </th>
+            <th class="w-1/12 p-2 border border-gray-400 text-center"> Submission Link </th>
+            <th class="w-1/12 p-2 border border-gray-400 text-center"> Submission Date </th>
+            <th class="w-1/12 p-2 border border-gray-400 text-center"> Status </th>
+            <th class="w-4/12 p-2 border border-gray-400 text-center"> Remarks </th>
+            <th class="w-1/12 p-2 border border-gray-400 text-center"> Edit </th>
+            <th class="w-3/12 p-2 border border-gray-400 text-center"> Delete </th>
+             <!-- Add more headers as needed -->
+            </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let submission of submissions; let i=index" class="{{ i % 2 === 0 ? 'bg-gray-100' : 'bg-white' }}">
+             <td class="p-2 border border-gray-400 text-center">{{ i+1}}.</td>
+             <td class="p-2 border border-gray-400 text-center">
+              <input
+                [(ngModel)]="submission.SubmissionID"
+                *ngIf="editMode && i === editedIndex"
+                class="pl-2 border border-gray-400"
+              />
+              <span class="capitalize" *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                submission.SubmissionID
+              }}</span>
+            </td>
+             <td class="p-2 border border-gray-400 text-center">
+              <input
+                [(ngModel)]="submission.AssignmentID"
+                *ngIf="editMode && i === editedIndex"
+                class="pl-2 border border-gray-400"
+              />
+              <span class="capitalize" *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                submission.AssignmentID
+              }}</span>
+            </td>
+            <td class="p-2 border border-gray-400 text-center">
+                <input
+                  [(ngModel)]="submission.StudentID"
+                  *ngIf="editMode && i === editedIndex"
+                  class="pl-2 border border-gray-400"
+                />
+                <span class="capitalize" *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                  submission.StudentID
+                }}</span>
+              </td>
+            <td class="p-2 border border-gray-400 text-center">
+                <input
+                  [(ngModel)]="submission.SubmissionLink"
+                  *ngIf="editMode && i === editedIndex"
+                  class="pl-2 border border-gray-400"
+                />
+                <a [href]="submission.SubmissionLink.startsWith('http') ? submission.SubmissionLink : 'http://' + submission.SubmissionLink" class="text-blue-600" target="_blank" *ngIf="!editMode || (editMode && i !== editedIndex)">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </td>
+             <td class="p-2 border border-gray-400 text-center">
+              <input
+                [(ngModel)]="submission.SubmissionDate"
+                type="date"
+                *ngIf="editMode && i === editedIndex"
+                class="pl-2 border border-gray-400"
+              />
+              <span  *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                submission.SubmissionDate
+              }}</span>
+            </td>
+            <td class="p-2 border border-gray-400 text-center">
+                <input
+                  [(ngModel)]="submission.Status"
+                  *ngIf="editMode && i === editedIndex"
+                  class="pl-2 border border-gray-400"
+                />
+                <span class="capitalize" *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                  submission.Status
+                }}</span>
+              </td>
+              <td class="p-2 border border-gray-400 text-center">
+                <input
+                  [(ngModel)]="submission.Remarks"
+                  *ngIf="editMode && i === editedIndex"
+                  class="pl-2 border border-gray-400"
+                />
+                <span class="capitalize" *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                  submission.Remarks
+                }}</span>
+              </td>
+             <td class="p-2 border border-gray-400 text-center">
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold p-4 rounded"
+                (click)="onEditClick(i, submission)"
+                *ngIf="!editMode || (editMode && i !== editedIndex)"
+              >
+                <i class="fas fa-edit"></i>
+              </button>
+              <button
+                class="bg-green-500 hover:bg-green-700 text-white font-bold p-4 rounded"
+                (click)="onSaveClick(i)"
+                *ngIf="editMode && i === editedIndex"
+              >
+                <i class="fas fa-save"></i>
+              </button>
+            </td>
+            <td class="p-2 border border-gray-400 text-center">
+              <button class="bg-red-500 hover:bg-red-700 text-white font-bold p-4 rounded"  (click)="onDeleteClick(submission._id)">
+                <i class="fas fa-trash"></i>
+              </button>
+             <!-- Display other properties -->
+           </tr>
+         </tbody>
+       </table>
+     </div>
+   </div>
+   
+

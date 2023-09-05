@@ -1,0 +1,31 @@
+<app-dashboard/>
+<div class="flex justify-center items-center h-screen mt-24">
+  <div class="ml-48 w-full max-w-md">
+    <h2 class="text-2xl font-semibold mb-4 text-center text-2xl">Assignment Form</h2>
+    <form (ngSubmit)="onSubmit()" #courseForm="ngForm" class="bg-white shadow-2xl rounded px-8 pt-6 pb-8 mb-4">
+      <div class="mb-4">
+        <label for="AssignmentID" class="block text-gray-700 text-sm font-bold mb-2">Assignment ID</label>
+        <input type="text" id="AssignmentID" name="AssignmentID" [(ngModel)]="assignment.AssignmentID" class="form-input border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-500">
+      </div>
+      <div class="mb-4">
+        <label for="CourseCode" class="block text-gray-700 text-sm font-bold mb-2">Course Code</label>
+        <input type="text" id="CourseCode" name="CourseCode" [(ngModel)]="assignment.CourseCode" class="form-input border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-500">
+      </div>
+      <div class="mb-4">
+        <label for="Title" class="block text-gray-700 text-sm font-bold mb-2">Title</label>
+        <input type="text" id="Title" name="Title" [(ngModel)]="assignment.Title" class="form-input border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-500">
+      </div>
+      <div class="mb-4">
+        <label for="Description" class="block text-gray-700 text-sm font-bold mb-2">Description</label>
+        <textarea id="Description" name="Description" [(ngModel)]="assignment.Description" class="form-input border border-gray-300 rounded px-3 py-2 w-full h-32 resize-none focus:outline-none focus:border-blue-500"></textarea>
+      </div>
+      <div class="mb-4">
+        <label for="DueDate" class="block text-gray-700 text-sm font-bold mb-2">Due Date</label>
+        <input type="date" id="DueDate" name="DueDate" [(ngModel)]="assignment.DueDate" class="form-input border border-gray-300 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-500">
+      </div>
+      <div class="flex justify-center">
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

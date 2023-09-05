@@ -8,6 +8,8 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { InstructorListComponent } from './instructor-list/instructor-list.component';
 import { InstructorFormComponent } from './instructor-form/instructor-form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AssignmentListComponent } from './assignment-list/assignment-list.component';
+import { AssignmentFormComponent } from './assignment-form/assignment-form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'add_student', component: StudentFormComponent },
   { path: 'instructor', component: InstructorListComponent },
   { path: 'add_instructor', component: InstructorFormComponent },
+  { path: 'assignment', component: AssignmentListComponent },
+  { path: 'add_assignment', component: AssignmentFormComponent },
 ];
 
 @NgModule({

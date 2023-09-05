@@ -1,0 +1,100 @@
+<app-dashboard/>
+   <h1 class="mt-24 ml-64 text-center font-bold text-3xl">Assignment List</h1>
+   <div class="ml-64 flex justify-center items-center">
+     <div class="overflow-x-auto w-full p-20">
+       <table class="min-w-full table-fixed border-collapse border border-gray-400">
+         <thead>
+           <tr class="bg-gray-500 text-white">
+            <th class="w-1/12 p-2 border border-gray-400 text-center"> S.No. </th>
+            <th class="w-2/12 p-2 border border-gray-400 text-center"> Assignment ID </th>
+            <th class="w-2/12 p-2 border border-gray-400 text-center"> Course Code </th>
+            <th class="w-1/12 p-2 border border-gray-400 text-center"> Title </th>
+            <th class="w-4/12 p-2 border border-gray-400 text-center"> Description </th>
+            <th class="w-4/12 p-2 border border-gray-400 text-center"> Due Date </th>
+            <th class="w-1/12 p-2 border border-gray-400 text-center"> Edit </th>
+            <th class="w-3/12 p-2 border border-gray-400 text-center"> Delete </th>
+             <!-- Add more headers as needed -->
+            </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let assignment of assignments; let i=index" class="{{ i % 2 === 0 ? 'bg-gray-100' : 'bg-white' }}">
+             <td class="p-2 border border-gray-400 text-center">{{ i+1}}.</td>
+             <td class="p-2 border border-gray-400 text-center">
+                <input
+                  [(ngModel)]="assignment.AssignmentID"
+                  *ngIf="editMode && i === editedIndex"
+                  class="pl-2 border border-gray-400"
+                />
+                <span class="capitalize" *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                  assignment.AssignmentID
+                }}</span>
+              </td>
+             <td class="p-2 border border-gray-400 text-center">
+              <input
+                [(ngModel)]="assignment.CourseCode"
+                *ngIf="editMode && i === editedIndex"
+                class="pl-2 border border-gray-400"
+              />
+              <span class="uppercase" *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                assignment.CourseCode
+              }}</span>
+            </td>
+            <td class="p-2 border border-gray-400 text-center">
+                <input
+                  [(ngModel)]="assignment.Title"
+                  *ngIf="editMode && i === editedIndex"
+                  class="pl-2 border border-gray-400"
+                />
+                <span class="capitalize" *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                  assignment.Title
+                }}</span>
+              </td>
+             <td class="p-2 border border-gray-400 text-center">
+              <input
+                [(ngModel)]="assignment.Description"
+                *ngIf="editMode && i === editedIndex"
+                class="pl-2 border border-gray-400"
+              />
+              <span class="capitalize" *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                assignment.Description
+              }}</span>
+            </td>
+             <td class="p-2 border border-gray-400 text-center">
+              <input
+                [(ngModel)]="assignment.DueDate"
+                *ngIf="editMode && i === editedIndex"
+                type="date"
+                class="pl-2 border border-gray-400"
+              />
+              <span *ngIf="!editMode || (editMode && i !== editedIndex)">{{
+                assignment.DueDate
+              }}</span>
+            </td>
+             <td class="p-2 border border-gray-400 text-center">
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold p-4 rounded"
+                (click)="onEditClick(i, assignment)"
+                *ngIf="!editMode || (editMode && i !== editedIndex)"
+              >
+                <i class="fas fa-edit"></i>
+              </button>
+              <button
+                class="bg-green-500 hover:bg-green-700 text-white font-bold p-4 rounded"
+                (click)="onSaveClick(i)"
+                *ngIf="editMode && i === editedIndex"
+              >
+                <i class="fas fa-save"></i>
+              </button>
+            </td>
+            <td class="p-2 border border-gray-400 text-center">
+              <button class="bg-red-500 hover:bg-red-700 text-white font-bold p-4 rounded"  (click)="onDeleteClick(assignment._id)">
+                <i class="fas fa-trash"></i>
+              </button>
+             <!-- Display other properties -->
+           </tr>
+         </tbody>
+       </table>
+     </div>
+   </div>
+   
+

@@ -21,6 +21,10 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AssignmentFormComponent } from './assignment-form/assignment-form.component';
+import { AssignmentListComponent } from './assignment-list/assignment-list.component';
+import { EnrollmentListComponent } from './enrollment-list/enrollment-list.component';
+import { SubmissionListComponent } from './submission-list/submission-list.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     LogoutComponent,
     ProfileComponent,
-    DashboardComponent
+    DashboardComponent,
+    AssignmentFormComponent,
+    AssignmentListComponent,
+    EnrollmentListComponent,
+    SubmissionListComponent
   ],
   imports: [
     BrowserModule,

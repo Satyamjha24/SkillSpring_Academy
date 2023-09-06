@@ -25,6 +25,7 @@ import { AssignmentFormComponent } from './assignment-form/assignment-form.compo
 import { AssignmentListComponent } from './assignment-list/assignment-list.component';
 import { EnrollmentListComponent } from './enrollment-list/enrollment-list.component';
 import { SubmissionListComponent } from './submission-list/submission-list.component';
+import { ChartsComponent } from './charts/charts.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { SubmissionListComponent } from './submission-list/submission-list.compo
     AssignmentFormComponent,
     AssignmentListComponent,
     EnrollmentListComponent,
-    SubmissionListComponent
+    SubmissionListComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,

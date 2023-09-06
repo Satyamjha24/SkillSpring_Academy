@@ -12,6 +12,7 @@ import { AssignmentListComponent } from './assignment-list/assignment-list.compo
 import { AssignmentFormComponent } from './assignment-form/assignment-form.component';
 import { EnrollmentListComponent } from './enrollment-list/enrollment-list.component';
 import { SubmissionListComponent } from './submission-list/submission-list.component';
+import { ChartsComponent } from './charts/charts.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'add_assignment', component: AssignmentFormComponent },
   { path: 'enrollment', component: EnrollmentListComponent },
   { path: 'submission', component: SubmissionListComponent },
+  { path: 'chart', component: ChartsComponent },
 ];
 
 @NgModule({

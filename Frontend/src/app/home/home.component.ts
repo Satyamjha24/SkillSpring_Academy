@@ -17,7 +17,7 @@ export class HomeComponent {
   ngOnInit(): void {
     this.auth.isAuthenticated$.subscribe((isAuthenticated) => {
       this.isLoggedIn = isAuthenticated;
-      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("isLoggedIn", "false");
       if(isAuthenticated){
         this.router.navigate(['/dashboard']);
         this.toast.success({detail:"SUCCESS",summary:'Logged In Successfully',duration:2000, position:'botomCenter'});

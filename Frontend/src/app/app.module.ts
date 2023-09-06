@@ -26,6 +26,8 @@ import { AssignmentListComponent } from './assignment-list/assignment-list.compo
 import { EnrollmentListComponent } from './enrollment-list/enrollment-list.component';
 import { SubmissionListComponent } from './submission-list/submission-list.component';
 import { ChartsComponent } from './charts/charts.component';
+import { GraphComponent } from './graph/graph.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { ChartsComponent } from './charts/charts.component';
     AssignmentListComponent,
     EnrollmentListComponent,
     SubmissionListComponent,
-    ChartsComponent
+    ChartsComponent,
+    GraphComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,7 @@ import { ChartsComponent } from './charts/charts.component';
     RouterModule,
     HttpClientModule,
     NgToastModule,
+    NgChartsModule,
     AuthModule.forRoot({
       domain: 'dev-jwvwtwvlur4qpvte.us.auth0.com',
       clientId: '1FfBKJzZOVvh6WhXgSif5GywrSRcpwou',

@@ -16,7 +16,7 @@ import { ChartsComponent } from './charts/charts.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard', component: ChartsComponent },
   { path: 'course', component: CourseListComponent },
   { path: 'add_course', component: CourseFormComponent },
   { path: 'student', component: StudentListComponent },
@@ -27,7 +27,6 @@ const routes: Routes = [
   { path: 'add_assignment', component: AssignmentFormComponent },
   { path: 'enrollment', component: EnrollmentListComponent },
   { path: 'submission', component: SubmissionListComponent },
-  { path: 'chart', component: ChartsComponent },
 ];
 
 @NgModule({

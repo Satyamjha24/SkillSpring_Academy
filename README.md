@@ -3,13 +3,14 @@ Skill Spring Academy: A rapid solo development of a learning management system, 
 
 ---
 
-💻Unique Project Name & logo :- Skill Spring Academy
+💻Unique Project Name & logo :- # Skill Spring Academy
 
 
 ![image](https://img.icons8.com/?size=256&id=7vSF0cgCi_2B&format=png)
 
 ---
 ⭐Frontend Deployed Link:-https://skill-spring-academy.netlify.app/
+<br>
 ⭐Frontend Deployed Link:-https://skill-spring-backend.vercel.app/
 
 ---

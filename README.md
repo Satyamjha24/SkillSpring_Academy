@@ -3,7 +3,7 @@ Skill Spring Academy: A rapid solo development of a learning management system, 
 
 ---
 
-💻Unique Project Name & logo :- # Skill Spring Academy
+💻Unique Project Name & logo :- Skill Spring Academy
 
 
 ![image](https://img.icons8.com/?size=256&id=7vSF0cgCi_2B&format=png)
@@ -11,7 +11,7 @@ Skill Spring Academy: A rapid solo development of a learning management system, 
 ---
 ⭐Frontend Deployed Link:-https://skill-spring-academy.netlify.app/
 <br>
-⭐Frontend Deployed Link:-https://skill-spring-backend.vercel.app/
+⭐Backend Deployed Link:-https://skill-spring-backend.vercel.app/
 
 ---
  💫Tech Stack Used ->
@@ -32,9 +32,17 @@ For Backend :- Python, Django .
 
 
 # Signup | Login
-
+![image](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/542f553a-7153-4481-bc12-d4623b483cf0)
 
 # Dashboard
 ![dash](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/c469e540-72eb-4abe-aa0f-4746d33a99e3)
+
+# Add New Entity
+![image](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/51441587-a505-4fed-9f0f-333c37d978c2)
+
+# Student List
+![image](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/1e721efc-3ef0-4a37-b9f5-598668b58f77)
+
+
 ----
 <h1 align="center">✨Thank You✨</h1>

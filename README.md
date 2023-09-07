@@ -28,21 +28,21 @@ For Backend :- Python, Django .
 ---
 
 # HomePage
-![image](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/9bbfff94-23fc-46b7-8860-10dc428c8bf9)
 
+![Screenshot (718)](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/8e9fb68f-6ff2-4a69-8ed9-4cea6895a81e)
 
 # Signup | Login
-![image](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/542f553a-7153-4481-bc12-d4623b483cf0)
+![Screenshot (720)](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/572524c6-ffd3-4e6b-a4b0-c2dd4d59dc04)
 
 # Dashboard
-![dash](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/c469e540-72eb-4abe-aa0f-4746d33a99e3)
+![Screenshot (719)](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/042b54f1-0275-48d0-a822-8e0294ef65dd)
 
 # Add New Entity
-![image](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/51441587-a505-4fed-9f0f-333c37d978c2)
+![Screenshot (722)](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/b59dd641-321f-4f46-b73f-21c96888806a)
 
 # Student List
-![image](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/1e721efc-3ef0-4a37-b9f5-598668b58f77)
 
+![Screenshot (721)](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/35ffebfc-f767-4c40-ab0f-72f951619f7d)
 
 ----
 <h1 align="center">✨Thank You✨</h1>

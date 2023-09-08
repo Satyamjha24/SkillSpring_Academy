@@ -46,7 +46,7 @@ For Backend :- Python, Django .
 
 ----
 
-| Action | Endpoint |                                                               
+| Action | Student's Endpoint |                                                               
 | --- | --- |                                                                       
 | Register User | POST /Auth0 |
 | Log In User | POST /Auth0 |                                                        
@@ -59,8 +59,56 @@ For Backend :- Python, Django .
 | Action | Instructor's Endpoint |
 | --- | --- |
 | Add Instructor | POST /api/add_instructor |
-| Get Student | GET /api/instructors |
-| Update Student | PATCH /api/instructors/update/<str:instructor_id> |
-| Delete Student | DELETE /api/instructors/<str:instructor_id> |
+| Get Instructor | GET /api/instructors |
+| Update Instructor | PATCH /api/instructors/update/<str:instructor_id> |
+| Delete Instructor | DELETE /api/instructors/<str:instructor_id> |
+----
+
+| Action | Course's Endpoint |
+| --- | --- |
+| Add Course | POST /api/add_course |
+| Get Course | GET /api/courses |
+| Update Course | PATCH /api/courses/update/<str:course_id> |
+| Delete Course | DELETE /api/courses/<str:course_id> |
+----
+
+| Action | Assignment's Endpoint |
+| --- | --- |
+| Add Assignment | POST /api/add_assignment |
+| Get Assignment | GET /api/assignments |
+| Update Assignment | PATCH /api/assignments/update/<str:assignment_id> |
+| Delete Assignment | DELETE /api/assignments/<str:assignment_id> |
+----
+
+| Action | Submission's Endpoint |
+| --- | --- |
+| Add Submission | POST /api/add_submission |
+| Get Submission | GET /api/submission |
+| Update Submission | PATCH /api/submission/update/<str:submission_id> |
+| Delete Submission | DELETE /api/submission/<str:submission_id> |
+----
+
+| Action | Enrollment's Endpoint |
+| --- | --- |
+| Add Enrollment | POST /api/add_enrollment |
+| Get Enrollment | GET /api/enrollment |
+| Update Enrollment | PATCH /api/enrollment/update/<str:Enrollment_id> |
+| Delete Enrollment | DELETE /api/enrollment/<str:enrollment_id> |
+----
+
+| Action | Announcement's Endpoint |
+| --- | --- |
+| Add Announcement | POST /api/add_announcement |
+| Get Announcement | GET /api/announcement |
+| Update Announcement | PATCH /api/announcement/update/<str:announcement_id> |
+| Delete Announcement | DELETE /api/announcement/<str:announcement_id> |
+----
+
+| Action | Department's Endpoint |
+| --- | --- |
+| Add Department | POST /api/add_department |
+| Get Department | GET /api/department |
+| Update Department | PATCH /api/department/update/<str:department_id> |
+| Delete Department | DELETE /api/department/<str:department_id> |
 ----
 <h1 align="center">✨Thank You✨</h1>

@@ -45,4 +45,14 @@ For Backend :- Python, Django .
 ![Screenshot (721)](https://github.com/Satyamjha24/SkillSpring_Academy/assets/107462251/35ffebfc-f767-4c40-ab0f-72f951619f7d)
 
 ----
+
+| Action | Endpoint |
+| --- | --- |
+| Register User | POST /Auth0 |
+| Log In User | POST /Auth0 |
+| Add Student | POST /api/add_student | 
+| Get Student | GET /api/students |
+| Update Student | PATCH /api/students/update/<str:student_id> |
+| Delete Student | DELETE /api/students/<str:student_id> |
+----
 <h1 align="center">✨Thank You✨</h1>

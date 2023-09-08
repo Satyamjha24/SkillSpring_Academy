@@ -46,13 +46,21 @@ For Backend :- Python, Django .
 
 ----
 
-| Action | Endpoint |                                                               | Action | Endpoint |
-| --- | --- |                                                                       | --- | --- |
+| Action | Endpoint |                                                               
+| --- | --- |                                                                       
 | Register User | POST /Auth0 |
-| Log In User | POST /Auth0 |                                                       | Add Instructor | POST /api/add_instructor | 
-| Add Student | POST /api/add_student |                                             | Get Student | GET /api/instructors |
-| Get Student | GET /api/students |                                                 | Update Student | PATCH /api/instructors/update/<str:instructor_id> |
-| Update Student | PATCH /api/students/update/<str:student_id> |                    | Delete Student | DELETE /api/instructors/<str:instructor_id> |
-| Delete Student | DELETE /api/students/<str:student_id> |                          ----
+| Log In User | POST /Auth0 |                                                        
+| Add Student | POST /api/add_student |                                             
+| Get Student | GET /api/students |                                                 
+| Update Student | PATCH /api/students/update/<str:student_id> |                    
+| Delete Student | DELETE /api/students/<str:student_id> |                         
+----
+
+| Action | Instructor's Endpoint |
+| --- | --- |
+| Add Instructor | POST /api/add_instructor |
+| Get Student | GET /api/instructors |
+| Update Student | PATCH /api/instructors/update/<str:instructor_id> |
+| Delete Student | DELETE /api/instructors/<str:instructor_id> |
 ----
 <h1 align="center">✨Thank You✨</h1>

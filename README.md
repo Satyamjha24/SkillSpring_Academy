@@ -92,7 +92,7 @@ For Backend :- Python, Django .
 | --- | --- |
 | Add Enrollment | POST /api/add_enrollment |
 | Get Enrollment | GET /api/enrollment |
-| Update Enrollment | PATCH /api/enrollment/update/<str:Enrollment_id> |
+| Update Enrollment | PATCH /api/enrollment/update/<str:enrollment_id> |
 | Delete Enrollment | DELETE /api/enrollment/<str:enrollment_id> |
 ----
 
